@@ -6,7 +6,11 @@ import FlagIcon from "@material-ui/icons/Flag"
 import SubscriptionOutlinedIcon from "@material-ui/icons/SubscriptionsOutlined"
 import StorefrontOutlinedIcon from "@material-ui/icons/StorefrontOutlined"
 import SupervisedUserCircleIcon from "@material-ui/icons/SupervisedUserCircle"
-import {Avatar} from "@material-ui/core"
+import { Avatar, IconButton } from "@material-ui/core"
+import AddIcon from "@material-ui/icons/Add"
+import ForumIcon from "@material-ui/icons/Forum"
+import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive"
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 
 function Header() {
     return (
@@ -43,6 +47,13 @@ function Header() {
                     <Avatar />
                     <h4>mdilulo</h4>
                 </div>
+
+                <IconButton>
+                    <AddIcon />
+                    <ForumIcon />
+                    <NotificationsActiveIcon />
+                    <ExpandMoreIcon />
+                </IconButton>
 
             </div>
         </div>
