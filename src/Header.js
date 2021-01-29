@@ -50,8 +50,14 @@ function Header() {
 
                 <IconButton>
                     <AddIcon />
+                </IconButton>
+                <IconButton>
                     <ForumIcon />
+                </IconButton>
+                <IconButton>
                     <NotificationsActiveIcon />
+                </IconButton>
+                <IconButton>
                     <ExpandMoreIcon />
                 </IconButton>
 
