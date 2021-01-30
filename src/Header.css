@@ -61,3 +61,20 @@
   padding: 0 30px;
   border-bottom: none;
 }
+
+.header__info {
+  display: flex;
+  align-items: center;
+}
+
+.header__info > h4 {
+  margin-left: 10px;
+}
+
+.header__right {
+  display: flex;
+}
+
+.header__option--active > .MuiSvgIcon-root {
+  color: #2e81f4;
+}
