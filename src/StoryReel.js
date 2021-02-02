@@ -7,8 +7,8 @@ function StoryReel() {
     return (
         <div className="storyReel">
             <Story image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTBHC2s4NFdzXEsVzvBPGjkrSePQa-8XFuNtQ&usqp=CAU"
-                profileSrc="https://avatars2.githubusercontent.com/u/24712956?s=400&u=b71527e6051b748fc2d4157a842e57e427ad44&v=4"
-                title="Sonny Sangha"
+                profileSrc="https://www.petmd.com/sites/default/files/styles/article_image/public/petmd-puppy-weight.jpg?itok=IwMOwGSX"
+                title="Puppy McGee"
             />
             {/* Story Two Component */}
             {/* Story Three Component */}
