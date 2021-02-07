@@ -6,7 +6,7 @@ import Widget from "./Widget"
 import Login from "./Login"
 
 function App() {
-  const user = 'Maya';
+  const user = null;
 
   return (
     <div className="app">
