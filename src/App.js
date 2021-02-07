@@ -3,13 +3,16 @@ import Header from "./Header"
 import Sidebar from "./Sidebar"
 import Feed from "./Feed"
 import Widget from "./Widget"
+import Login from "./Login"
 
 function App() {
-  const user = null;
+  const user = 'Maya';
 
   return (
     <div className="app">
-      {!user ? <h1>Login</h1> : (
+      {!user ? (
+        <Login />
+      ) : (
         <>
               <Header />
 
@@ -19,8 +22,8 @@ function App() {
         <Feed />
         
       <Widget />
-          </div>
-          </>
+            </div>
+            </>
       )}
 
     </div>
