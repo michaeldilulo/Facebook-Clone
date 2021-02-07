@@ -5,9 +5,13 @@ import Feed from "./Feed"
 import Widget from "./Widget"
 
 function App() {
+  const user = null;
+
   return (
     <div className="app">
-      <Header />
+      {!user ? <h1>Login</h1> : (
+        <>
+              <Header />
 
       <div className="app__body">
         <Sidebar />
@@ -15,7 +19,9 @@ function App() {
         <Feed />
         
       <Widget />
-      </div>
+          </div>
+          </>
+      )}
 
     </div>
   );
