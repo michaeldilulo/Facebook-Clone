@@ -1,29 +1,35 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import "./Feed.css"
 import StoryReel from "./StoryReel"
 import MessageSender from "./MessageSender"
 import Post from "./Post"
+import db from "./firebase"
 
 function Feed() {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        db.collection('posts').onSnapshot(snapshot => (
+            setPosts(snapshot.docs.map(doc => ({id: doc.id, data: doc.data()})))
+        ))
+    }, [])
+
     return (
         <div className="feed">
 
             <StoryReel />
             <MessageSender />
-            <Post
-                profilePic="https://cdn11.bigcommerce.com/s-oe2q4reh/images/stencil/2048x2048/products/738/1295/Siberian_Husky_Puppy__60707.1568880761.jpg?c=2"
-                message="Wow This works!!!"
-                timestamp="2/5/2021 6:30 PM"
-                username="Puppy"
-                image="https://thehappypuppysite.com/wp-content/uploads/2015/09/The-Siberian-Husky-HP-long.jpg"
-            />
 
-            <Post 
-                profilePic="https://cdn11.bigcommerce.com/s-oe2q4reh/images/stencil/2048x2048/products/738/1295/Siberian_Husky_Puppy__60707.1568880761.jpg?c=2"
-                message="This is wooftastic!!!"
-                timestamp="2/5/2021 6:30 PM"
-                username="Puppy"
+            {posts.map(post => (
+                <Post
+                    key={post.id}
+                    profilePic={post.profilePic}
+                    message={post.message}
+                    timestamp={post.timestamp}
+                    username={post.username}
+                    image={post.image}
                 />
+            ))}
             
         </div>
     )
